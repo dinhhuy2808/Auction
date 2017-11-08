@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Sign Up</title>
+        <style>
+            a {text-decoration: none; color: black;}
+        </style>
+    </head>
+
+    <body>
+        <h1>My todolist</h1>
+
+        <ul>
+        <% todolist.forEach(function(todo, index) { %>
+            <li><a href="/todo/delete/<%= index %>">✘</a> <%= todo %></li>
+        <% }); %>
+        </ul>
+
+        <form action="/signup/add/" method="post">
+            <p>
+				<table>
+					<tr>
+						<td>
+							<label for="accountname">Account Name: </label>
+						</td>
+						<td>
+							<input type="text" name="accountname" id="accountname" autofocus />
+						</td>
+					</tr>
+					<br/>
+					<tr>
+						<td>
+							<label for="password">Password: </label>
+						</td>
+						<td>
+							<input type="password" name="password" id="password" autofocus />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="name">Full Name: </label>
+						</td>
+						<td>
+							<input type="text" name="name" id="name" autofocus />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="dob">Date Of Birth (dd/mm/YYYY): </label>
+						</td>
+						<td>
+							<input type="text" name="dob" id="dob" autofocus />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="email">Email: </label>
+						</td>
+						<td>
+							<input type="text" name="email" id="email" autofocus />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="phone">Phone Number: </label>
+						</td>
+						<td>
+							<input type="text" name="phone" id="phone" autofocus />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="address">Address: </label>
+						</td>
+						<td>
+							<input type="text" name="address" id="address" autofocus />
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<label for="jobs">Jobs: </label>
+						</td>
+						<td>
+								<select name="jobs" id="jobs">
+									<option value="A">A</option>
+									<option value="B">B</option>
+									<option value="C">C</option>
+									<option value="D">D</option>
+								</select>
+						</td>
+					</tr>
+					
+					<tr>
+						<td> <input type="submit" /> </td>
+					</tr>
+					
+				</table>
+			
+				
+				
+               
+            
+			
+			</p>
+        </form>
+    </body>
+</html>
